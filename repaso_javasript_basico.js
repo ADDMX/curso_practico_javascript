@@ -251,6 +251,11 @@ const array = [1, 'hola', true, false];
 
 // Objects
 
+function 
+imprimir(params) {
+  
+}
+
 const obj = {
   auto = "verna",
   modelo = 2007,
@@ -264,3 +269,47 @@ function primerElemento(array) {
 
 primerElemento (["rafa", "alfredo", "damian", "luis"]);
 
+console.log(["Juan", "Pedro","Natalia"]);
+
+function elementoPorElemento(arr) {
+  for (let i = 0; i < arr.length; i++ ){
+    console.log(arr[i])
+  }
+}
+
+// Condicionales con solo IF
+
+function conseguirTipoSuscripcion(suscripcion) {
+    if (suscripcion == "Free"){
+    console.log("solo puedes tomar los cursos gratis");
+    return;
+  } 
+  if (suscripcion  == "Basic"){
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    return;
+  }
+  if (suscripcion  == "Expert"){
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    return;
+  }
+  if (suscripcion   == "ExpertPlus"){
+    console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+    return;
+  }
+  console.warn("Este tipo de suscripción no existe");
+}
+
+const tiposDeSuscripciones = {
+  free: "Solo puedes tomar los cursos gratis",
+  basic: "Puedes tomar casi todos los cursos de Platzi durante un mes",
+  expert: "Puedes tomar casi todos los cursos de Platzi durante un año",
+  expertplus: "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año",
+};
+
+function conseguirTipoSuscripcion(suscripcion) {
+  if (tiposDeSuscripciones[suscripcion]){
+    console.log(tiposDeSuscripciones[suscripcion])
+    return;
+  }
+  console.warn("Este tipo de suscripción no existe")
+};
